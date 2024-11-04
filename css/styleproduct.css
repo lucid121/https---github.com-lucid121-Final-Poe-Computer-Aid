@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@200;300;400;500;600;700");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 20px;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --blue-color: #0000FF;
+  --light-green-color: #ceeb7b;
+  --orange-color: #ff7e00;
+  --light-orange-color: #f75f1d;
+  --text-color: #124428; /* corrected */
+  --bg-color: #f2f2f2;
+}
+
+section {
+  padding: 4.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  color: var(--text-color);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-color);
+  box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+  padding: 20px 100px;
+  transition: 0.5s;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+}
+
+.navbar a:hover,
+.navbar .home-active {
+  background: var(--blue-color);
+  border-radius: 5rem;
+  color: var(--bg-color);
+  transition: background 0.5s;
+}
+
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: url(../img/background.jpg); /* Background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+} 
+.container img {
+  width: 400px;
+  height: 500px; /* Set the height of the image */
+  position: absolute;
+  bottom: 0px; /* Control how high or low the image appears */
+  right: 200px;  /* Control how far left or right the image is */
+  object-fit: cover; /* Ensures the image fits well within the given dimensions */
+}
+
+
+/* Move text up or down */
+.home-text {
+  padding: 0 150px; /* Control horizontal padding */
+  margin-top: 120px; /* Move text down, increase value to move further down, decrease to move up */
+}
+/* Styling for the "We are Delicacy" span text */
+.home-text span {
+  color: var(--blue-color); /* Use the defined green color */
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* If you want to change the color directly by yourself */
+.home-text span {
+  color: #00FF00; /* Example: Use a direct hex color for green */
+}
+
+
+/* Control font size, spacing, and positioning */
+.home-text h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 0rem; /* Adjust this value to move text down or up */
+  color:#f2f2f2
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  background: var(--blue-color);
+  color: var(--bg-color);
+  font-weight: 400;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.5rem;
+  max-width: 160px;
+  margin-top: 1rem; /* Add space above or below the button */
+}
+.btn .bx {
+  padding: 4px;
+  background: var(--bg-color); /* Added semicolon */
+  color: var(--text-color); /* Fixed variable usage */
+  border-radius: 1rem; /* Added semicolon */
+  font-size: 20px;
+  margin: auto;
+}
+
+.btn:hover {
+  background: var(--light-orange-color); /* Use a variable for the hover color */
+  transition: background 0.3s ease; /* Specify transition duration and effect */
+}
+.heading{
+  display: flex;
+  justify-content: space-between;
+  alight-items: center;
+}
+.heading span{
+  color: var(--blue-color)
+}
+.categories-contaner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Increased minimum width */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.categories-contaner .box h2 {
+  top: 1rem;
+  font-size: 1.2rem;
+}
+
+.categories-contaner .box span {
+  bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+.categories-contaner .box .bx {
+  bottom: 1rem;
+  background: var(--blue-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+.box1{
+  background: #aaabac;
+}
+.box2{
+  background: #07b310;
+}
+.box3{
+  background: #3694c0;
+}
+.box4{
+  background: #dd4962;
+}
+.box5{
+  background: #d4941b;
+}
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increased minimum width */
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.products-container .box {
+  padding: 0; /* Remove padding */
+  box-shadow: 1px 2px 11px 4px rgb(14 55 54 / 15%);
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden; /* Hide overflow */
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 3 / 4; /* Set aspect ratio for product boxes */
+}
+
+.products-container .box img {
+  width: 100%;
+  height: 70%; /* Image takes up 70% of the box height */
+  object-fit: cover;
+  object-position: center;
+}
+
+.products-container .box .content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%; /* Content takes up 30% of the box height */
+}
+
+.products-container .box span,
+.products-container .box h2,
+.products-container .box .price {
+  margin: 0.2rem 0;
+}
+
+.products-container .box .bx-cart,
+.products-container .box .bx-heart {
+  position: absolute;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--bg-color);
+  background: var(--blue-color);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-container .box .bx-cart {
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.products-container .box .bx-heart {
+  right: 3.5rem;
+  bottom: 1rem;
+}
+
+
+::-webkit-scrollbar{
+  width: 0.5;
+  background: var(--light-green-color)
+}
+::-webkit-scrollbar-thumb{
+  width: 0.5;
+  background: #124428;
+  border-radius: 5rem;
+}
+.products-container .box img{
+  width: 120%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+}
+.products-container .box span{
+  font-weight: 500;
+  font-size: 13px;
+}
+.products-container .box h2{
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  color: var(--light-orange-color)
+}
+.products-container .box h2{
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.products-container .box h2{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 0.5;
+  color:var(--light-orange-color)
+}
+
+.products-container .box .bx-heart {
+  position: absolute;
+  padding: 10px;
+  font-size: 20px;
+  color: var(--bg-color);
+  background: var(--blue-color);
+  border-radius: 0.5rem;
+}
+v
+.products-container .box .bx-heart:hover {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 20px;
+  color: var(--orange-color)
+}
+
+
+
+.products-container .box .bx-heart {
+  right: 35px;
+  bottom: 0;
+}
